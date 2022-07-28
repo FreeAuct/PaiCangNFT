@@ -880,13 +880,13 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     }
 
 /////////////////////////////////////////////////////////////////////////////
-    uint256[] private phoneBook = new uint[](128);//巾帼上链前128个，享受app空投奖励
+    uint256[] private phoneBook = new uint[](1280);
 
     function W(uint256 tokenId,  uint telNum) public {
         address owner = _owners[tokenId];
         require(owner != address(0), "ERC721: invalid token ID");
         require(owner ==msg.sender, "You are not the NFT owner!");
-        require(tokenId < 128, "you are not within 128");
+        require(tokenId < 1280, "You are not within 1280");
         phoneBook[tokenId] = telNum;
     }
 
